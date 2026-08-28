@@ -11,7 +11,10 @@ The example demonstrates:
 - Markdown, JSON, and static HTML review artifacts; and
 - an advisory `HIGH` result that passes a `CRITICAL` blocking threshold.
 
-See the repository's example pull request for the complete check and comment.
+See [example pull request #1](https://github.com/pedroluna-gh/preflightops-demo/pull/1)
+for the completed check, bot comment, and downloadable artifacts. The workflow
+is pinned to the immutable
+[PreflightOps v0.3.0 release](https://github.com/pedroluna-gh/preflightops/releases/tag/v0.3.0).
 
 ## Files
 
