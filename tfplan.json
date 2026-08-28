@@ -1,4 +1,14 @@
 {
   "format_version": "1.2",
-  "resource_changes": []
+  "resource_changes": [
+    {
+      "address": "google_compute_instance.checkout",
+      "type": "google_compute_instance",
+      "change": {
+        "actions": ["update"],
+        "before": {"machine_type": "e2-standard-2"},
+        "after": {"machine_type": "e2-standard-8"}
+      }
+    }
+  ]
 }
