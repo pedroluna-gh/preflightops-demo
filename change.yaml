@@ -1,0 +1,22 @@
+change:
+  id: DEMO-100
+  title: Validate checkout release in staging
+  service: checkout-api
+  environment: staging
+  change_type: deployment
+  requested_by: demo-platform-team
+  description: Validate checkout-api 1.0.0 before production promotion.
+  rollback_plan: >-
+    Redeploy checkout-api 0.9.0 through the staging pipeline if smoke tests fail.
+    The payments-platform on-call owns the rollback; expected duration is 5 minutes.
+  monitoring_plan:
+    dashboards:
+      - https://grafana.example.com/d/checkout-api
+    alerts:
+      - checkout-api-error-rate
+    validation_window: 15 minutes
+    success_criteria:
+      - Error rate remains below 1 percent.
+  validation_plan:
+    - Confirm health and readiness endpoints return HTTP 200.
+    - Complete a synthetic checkout transaction.

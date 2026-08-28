@@ -1,0 +1,8 @@
+Terraform will perform the following actions:
+
+  # google_compute_instance.checkout will be updated in-place
+  ~ resource "google_compute_instance" "checkout" {
+      machine_type = "e2-standard-2" -> "e2-standard-4"
+    }
+
+Plan: 0 to add, 1 to change, 0 to destroy.
